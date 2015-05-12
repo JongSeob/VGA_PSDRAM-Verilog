@@ -1,8 +1,0 @@
-V3 3
-FL D:/Nexys2_Prjoects/VGA_BreakDown2/Rs232RefComp.vhd 2015/01/12.10:51:40 P.20131013
-EN work/Rs232RefComp 1431412339 \
-      FL D:/Nexys2_Prjoects/VGA_BreakDown2/Rs232RefComp.vhd \
-      PB ieee/std_logic_1164 1354696159 PB ieee/std_logic_arith 1354696160 \
-      PB ieee/STD_LOGIC_UNSIGNED 1354696162
-AR work/Rs232RefComp/Behavioral 1431412340 \
-      FL D:/Nexys2_Prjoects/VGA_BreakDown2/Rs232RefComp.vhd EN work/Rs232RefComp 1431412339
