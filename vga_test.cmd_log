@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.xst" -ofn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vga_test.ucf -p xc3s1200e-fg320-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.xst" -ofn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vga_test.ucf -p xc3s1200e-fg320-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.xst" -ofn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vga_test.ucf -p xc3s1200e-fg320-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.xst" -ofn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vga_test.ucf -p xc3s1200e-fg320-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.xst" -ofn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vga_test.ucf -p xc3s1200e-fg320-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.xst" -ofn "D:/Nexys2_Prjoects/VGA_BreakDown2/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vga_test.ucf -p xc3s1200e-fg320-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 

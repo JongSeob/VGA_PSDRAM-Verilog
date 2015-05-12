@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Nexys2_Prjoects\VGA_BreakDown2\vga_test.ncd
+OUTFILE=D:\Nexys2_Prjoects\VGA_BreakDown2\vga_test.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=D:\Nexys2_Prjoects\VGA_BreakDown2
+LICENSE=WebPack
+USER_INFO=_

@@ -1,0 +1,114 @@
+
+# clock pin for Nexys 2 Board
+NET "clk" LOC = B8;
+
+## Switches
+NET "SideSwitch[0]" LOC = G18;
+NET "SideSwitch[1]" LOC = H18;
+NET "SideSwitch[2]" LOC = K18;
+NET "SideSwitch[3]" LOC = K17;
+NET "SideSwitch[4]" LOC = L14;
+NET "SideSwitch[5]" LOC = L13;
+NET "SideSwitch[6]" LOC = N17;
+NET "SideSwitch[7]" LOC = R17;
+
+## Leds
+NET "Led[0]" LOC = J14;
+NET "Led[1]" LOC = J15;
+NET "Led[2]" LOC = K15;
+NET "Led[3]" LOC = K14;
+NET "Led[4]" LOC = E16;
+NET "Led[5]" LOC = P16;
+NET "Led[6]" LOC = E4;
+NET "Led[7]" LOC = P4;
+
+## Seg Com
+NET "AnodeControl[0]" LOC = F17;
+NET "AnodeControl[1]" LOC = H17;
+NET "AnodeControl[2]" LOC = C18;
+NET "AnodeControl[3]" LOC = F15;
+
+## Buttons
+NET "BtnSwitch[0]" LOC = B18;
+NET "BtnSwitch[1]" LOC = D18;
+NET "BtnSwitch[2]" LOC = E18;
+NET "BtnSwitch[3]" LOC = H13;
+
+## VGA Connector 
+NET "vgaRed<1>"   LOC = "R9";      # Bank = 2, Pin name = IO/D5, Type = DUAL,                            Sch name = RED0
+NET "vgaRed<2>"   LOC = "T8";      # Bank = 2, Pin name = IO_L10N_2, Type = I/O,                         Sch name = RED1
+NET "vgaRed<3>"   LOC = "R8";      # Bank = 2, Pin name = IO_L10P_2, Type = I/O,                         Sch name = RED2
+NET "vgaGreen<1>" LOC = "N8";      # Bank = 2, Pin name = IO_L09N_2, Type = I/O,                         Sch name = GRN0
+NET "vgaGreen<2>" LOC = "P8";      # Bank = 2, Pin name = IO_L09P_2, Type = I/O,                         Sch name = GRN1
+NET "vgaGreen<3>" LOC = "P6";      # Bank = 2, Pin name = IO_L05N_2, Type = I/O,                         Sch name = GRN2
+NET "vgaBlue<2>"  LOC = "U5";      # Bank = 2, Pin name = IO/VREF_2, Type = VREF,                        Sch name = BLU1
+NET "vgaBlue<3>"  LOC = "U4";      # Bank = 2, Pin name = IO_L03P_2/DOUT/BUSY, Type = DUAL,              Sch name = BLU2
+
+NET "Hsync"       LOC = "T4";      # Bank = 2, Pin name = IO_L03N_2/MOSI/CSI_B, Type = DUAL,             Sch name = HSYNC
+NET "Vsync"       LOC = "U3";      # Bank = 2, Pin name = IO_L01P_2/CSO_B, Type = DUAL,                  Sch name = VSYNC
+
+# 7 segment display
+NET "SegA"   LOC = L18;
+NET "SegB"   LOC = F18;
+NET "SegC"   LOC = D17;
+NET "SegD"   LOC = D16;
+NET "SegE"   LOC = G14;
+NET "SegF"   LOC = J17;
+NET "SegG"   LOC = H14;
+NET "Seg_DP" LOC = C17;
+
+# onBoard Cellular RAM and StrataFlash
+NET "MemOE"  LOC = T2;
+NET "MemWR"  LOC = N7;
+NET "RamADV" LOC = J4;
+NET "RamCE"  LOC = R6;
+NET "RamClk" LOC = H5;
+NET "RamCRE" LOC = P7;
+NET "RamLB"  LOC = K5;
+NET "RamUB"  LOC = K4;
+NET "RamWait"   LOC = "F5"; # Bank = 3, Pin name = IP, Type = INPUT, Sch name = MT-WAIT
+
+NET "MemAdr[1]"  LOC = J1;
+NET "MemAdr[2]"  LOC = J2;
+NET "MemAdr[3]"  LOC = H4;
+NET "MemAdr[4]"  LOC = H1;
+NET "MemAdr[5]"  LOC = H2;
+NET "MemAdr[6]"  LOC = J5;
+NET "MemAdr[7]"  LOC = H3;
+NET "MemAdr[8]"  LOC = H6;
+NET "MemAdr[9]"  LOC = F1;
+NET "MemAdr[10]" LOC = G3;
+NET "MemAdr[11]" LOC = G6;
+NET "MemAdr[12]" LOC = G5;
+NET "MemAdr[13]" LOC = G4;
+NET "MemAdr[14]" LOC = F2;
+NET "MemAdr[15]" LOC = E1;
+NET "MemAdr[16]" LOC = M5;
+NET "MemAdr[17]" LOC = E2;
+NET "MemAdr[18]" LOC = C2;
+NET "MemAdr[19]" LOC = C1;
+NET "MemAdr[20]" LOC = D2;
+NET "MemAdr[21]" LOC = K3;
+NET "MemAdr[22]" LOC = D1;
+NET "MemAdr[23]" LOC = K6;
+
+NET "MemDB[0]"  LOC = L1;
+NET "MemDB[1]"  LOC = L4;
+NET "MemDB[2]"  LOC = L6;
+NET "MemDB[3]"  LOC = M4;
+NET "MemDB[4]"  LOC = N5;
+NET "MemDB[5]"  LOC = P1;
+NET "MemDB[6]"  LOC = P2;
+NET "MemDB[7]"  LOC = R2;
+NET "MemDB[8]"  LOC = L3;
+NET "MemDB[9]"  LOC = L5;
+NET "MemDB[10]" LOC = M3;
+NET "MemDB[11]" LOC = M6;
+NET "MemDB[12]" LOC = L2;
+NET "MemDB[13]" LOC = N4;
+NET "MemDB[14]" LOC = R3;
+NET "MemDB[15]" LOC = T1;
+
+#RS232 Ports
+NET "RXD" LOC = U6;
+NET "TXD" LOC = P9;
