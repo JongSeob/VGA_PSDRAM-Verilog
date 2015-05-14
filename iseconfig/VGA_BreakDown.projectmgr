@@ -10,15 +10,18 @@
          <ClosedNode>/vga_test D:|Nexys2_Prjoects|VGA_BreakDown2|vga_test.v/SevenSegment - SevenSegment</ClosedNode>
          <ClosedNode>/vga_test D:|Nexys2_Prjoects|VGA_BreakDown2|vga_test.v/VGA - VGA</ClosedNode>
          <ClosedNode>/vga_test D:|Nexys2_Prjoects|VGA_BreakDown2|vga_test.v/uart0 - uart</ClosedNode>
+         <ClosedNode>/vga_test E:|VGA_PSDRAM_Project|vga_test.v/SevenSegment - SevenSegment</ClosedNode>
+         <ClosedNode>/vga_test E:|VGA_PSDRAM_Project|vga_test.v/VGA - VGA/sync_generater - sync_generater</ClosedNode>
+         <ClosedNode>/vga_test E:|VGA_PSDRAM_Project|vga_test.v/uart0 - uart</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>vga_test (E:/VGA_PSDRAM_Project/vga_test.v)</SelectedItem>
+         <SelectedItem>rgb_fifo - fifo (E:/VGA_PSDRAM_Project/FIFO.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ca000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ca0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b6000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b60000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>vga_test (E:/VGA_PSDRAM_Project/vga_test.v)</CurrentItem>
+      <CurrentItem>rgb_fifo - fifo (E:/VGA_PSDRAM_Project/FIFO.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
