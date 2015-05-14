@@ -96,7 +96,7 @@ module VGA
 		else begin
 			{vgaRed, vgaGreen, vgaBlue} <= 8'h00;			
 		end
-				
+		
 		if( (hcount >= 0 && hcount <= 478) ) begin
 			if( (hcount & 1) == 0) // hcount == 0, 2, 4, 6, 8, 10, ........... , 478
 				rd_en <= 1;
@@ -132,8 +132,10 @@ module VGA
 								state_next <= STATE1;
 							end
 							else begin
+								MemOE <= 1;
 								RamCE <= 1;
 								index <= 0;
+								state_next <= STATE0;
 							end
 								
 							wr_en  <= 0;
@@ -146,9 +148,12 @@ module VGA
 							buf_in <= MemDataIn;
 							wr_en  <= 1;
 							
-							MemOE <= 1;
-							index <= index + 1;
-							state_next <= STATE0;
+							if(buf_full == 0) begin
+								MemOE <= 1;
+								RamCE <= 1;
+								index <= index + 1;
+								state_next <= STATE0;
+							end
 						end
 		endcase
 	end
