@@ -1,0 +1,12 @@
+MO CounterRefresh NULL SevenSegment.v vlg2F/_counter_refresh.bin 1432621873
+MO SegmentDecoder NULL SevenSegment.v vlg01/_segment_decoder.bin 1432621873
+MO vga_test NULL vga_test.v vlg15/vga__test.bin 1432621873
+MO VGA NULL vga.v vlg0A/_v_g_a.bin 1432621873
+EN rs232refcomp NULL E:/VGA_PSDRAM_Project/Rs232RefComp.vhd sub00/vhpl00 1432621873
+MO sync_generater NULL sync_generater.v vlg71/sync__generater.bin 1432621873
+MO psdram NULL psdram.v vlg3B/psdram.bin 1432621873
+MO Frequency_Divider NULL Frequency_Divider.v vlg3C/_frequency___divider.bin 1432621873
+AR rs232refcomp behavioral E:/VGA_PSDRAM_Project/Rs232RefComp.vhd sub00/vhpl01 1432621874
+MO SevenSegment NULL SevenSegment.v vlg08/_seven_segment.bin 1432621873
+MO fifo NULL FIFO.v vlg7C/fifo.bin 1431575151
+MO uart NULL uart.v vlg48/uart.bin 1432621873

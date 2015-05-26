@@ -1,0 +1,8 @@
+verilog work "Frequency_Divider.v"
+verilog work "sync_generater.v"
+vhdl work "Rs232RefComp.vhd"
+verilog work "vga.v"
+verilog work "uart.v"
+verilog work "SevenSegment.v"
+verilog work "psdram.v"
+verilog work "vga_test.v"
