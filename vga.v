@@ -177,7 +177,7 @@ module VGA
 	
 	Palette Palette_256color (
 		 .index		(rgb_cur[rd_ptr]), 
-		 .rgb			(rgb)
+		 .rgb			(rgb_pallete)
     );
 
 endmodule 
