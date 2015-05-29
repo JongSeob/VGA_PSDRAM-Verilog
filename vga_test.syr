@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: vga_test.prj
 
@@ -572,27 +572,25 @@ Unit <sync_generater> synthesized.
 
 Synthesizing Unit <VGA>.
     Related source file is "vga.v".
-WARNING:Xst:1305 - Output <Digit> is never assigned. Tied to value 0000000000000000.
-WARNING:Xst:653 - Signal <rgb_pallete> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
 WARNING:Xst:646 - Signal <rgb_next<639>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <rgb_cur<639>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:646 - Signal <rgb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Register <RamCE> equivalent to <MemOE> has been removed
     Using one-hot encoding for signal <state_reg>.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state_reg> of Case statement line 116 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state_reg> of Case statement line 121 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <state_reg> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 16-bit register for signal <Digit>.
     Found 3-bit register for signal <vgaRed>.
     Found 1-bit register for signal <MemOE>.
     Found 23-bit register for signal <MemAdr>.
     Found 2-bit register for signal <vgaBlue>.
     Found 3-bit register for signal <vgaGreen>.
-    Found 8-bit 640-to-1 multiplexer for signal <$varindex0000> created at line 178.
-    Found 20-bit adder carry out for signal <MemAdr$addsub0000> created at line 122.
-    Found 10-bit comparator greater for signal <MemAdr$cmp_gt0000> created at line 121.
-    Found 10x10-bit multiplier for signal <MemAdr$mult0000> created at line 122.
-    Found 10-bit comparator lessequal for signal <MemOE$cmp_le0000> created at line 121.
+    Found 8-bit 640-to-1 multiplexer for signal <$varindex0000> created at line 183.
+    Found 20-bit adder carry out for signal <MemAdr$addsub0000> created at line 127.
+    Found 10-bit comparator greater for signal <MemAdr$cmp_gt0000> created at line 126.
+    Found 10x10-bit multiplier for signal <MemAdr$mult0000> created at line 127.
+    Found 10-bit comparator lessequal for signal <MemOE$cmp_le0000> created at line 126.
     Found 10-bit up counter for signal <rd_ptr>.
     Found 5112-bit register for signal <rgb_cur<638:0>>.
     Found 5112-bit register for signal <rgb_next<638:0>>.
@@ -604,12 +602,12 @@ INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state_reg> of Case statement line 11
     Found 10-bit comparator less for signal <videov$cmp_lt0000> created at line 80.
     Found 10-bit up counter for signal <wr_ptr>.
     Found 1-bit register for signal <write_complete>.
-    Found 10-bit comparator lessequal for signal <write_complete$cmp_le0000> created at line 118.
+    Found 10-bit comparator lessequal for signal <write_complete$cmp_le0000> created at line 123.
 INFO:Xst:738 - HDL ADVISOR - 5112 flip-flops were inferred for signal <rgb_cur>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 INFO:Xst:738 - HDL ADVISOR - 5112 flip-flops were inferred for signal <rgb_next>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred   2 Counter(s).
-	inferred 10261 D-type flip-flop(s).
+	inferred 10277 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Multiplier(s).
 	inferred   7 Comparator(s).
@@ -632,15 +630,14 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
 	inferred  32 Tristate(s).
 Unit <vga_test> synthesized.
 
-WARNING:Xst:524 - All outputs of the instance <Palette_256color> of the block <Palette> are unconnected in block <VGA>.
-   This instance will be removed from the design along with all underlying logic
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
+# ROMs                                                 : 2
  16x7-bit ROM                                          : 1
+ 256x8-bit ROM                                         : 1
 # Multipliers                                          : 1
  10x10-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 4
@@ -652,11 +649,11 @@ Macro Statistics
  20-bit up counter                                     : 1
  4-bit up counter                                      : 4
  9-bit up counter                                      : 1
-# Registers                                            : 1330
+# Registers                                            : 1331
  1-bit register                                        : 28
  10-bit register                                       : 1
  11-bit register                                       : 1
- 16-bit register                                       : 2
+ 16-bit register                                       : 3
  2-bit register                                        : 1
  23-bit register                                       : 2
  24-bit register                                       : 2
@@ -675,6 +672,8 @@ Macro Statistics
  10-bit comparator lessequal                           : 4
  20-bit comparator greater                             : 1
  24-bit comparator less                                : 1
+# Multiplexers                                         : 1
+ 8-bit 640-to-1 multiplexer                            : 1
 # Tristates                                            : 2
  16-bit tristate buffer                                : 2
 # Xors                                                 : 2
@@ -726,9 +725,9 @@ Optimizing FSM <uart0/UART/sttCur/FSM> on signal <sttCur[1:2]> with user encodin
  stttransfer | 01
  sttshift    | 10
 -------------------------
+INFO:Xst:2261 - The FF/Latch <Digit_8> in Unit <VGA> is equivalent to the following 7 FFs/Latches, which will be removed : <Digit_9> <Digit_10> <Digit_11> <Digit_12> <Digit_13> <Digit_14> <Digit_15> 
 INFO:Xst:2261 - The FF/Latch <MemAdr_21> in Unit <VGA> is equivalent to the following FF/Latch, which will be removed : <MemAdr_22> 
-INFO:Xst:2261 - The FF/Latch <vgaRed_0> in Unit <VGA> is equivalent to the following 7 FFs/Latches, which will be removed : <vgaRed_1> <vgaRed_2> <vgaBlue_0> <vgaBlue_1> <vgaGreen_0> <vgaGreen_1> <vgaGreen_2> 
-WARNING:Xst:1710 - FF/Latch <vgaRed_0> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Digit_8> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <MemAdr_21> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <tfSReg_10> has a constant value of 1 in block <UART>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <stSendNext_2> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
@@ -737,44 +736,42 @@ WARNING:Xst:1710 - FF/Latch <stSendNext_4> (without init value) has a constant v
 WARNING:Xst:1710 - FF/Latch <stSendCur_2> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <stSendCur_3> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <stSendCur_4> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1290 - Hierarchical block <generateClk25Mhz> is unconnected in block <VGA>.
-   It will be removed from the design.
+WARNING:Xst:2404 -  FFs/Latches <Digit<15:8>> (without init value) have a constant value of 0 in block <VGA>.
 WARNING:Xst:2404 -  FFs/Latches <MemAdr<22:21>> (without init value) have a constant value of 0 in block <VGA>.
-WARNING:Xst:2404 -  FFs/Latches <vgaBlue<1:0>> (without init value) have a constant value of 0 in block <VGA>.
-WARNING:Xst:2404 -  FFs/Latches <vgaGreen<2:0>> (without init value) have a constant value of 0 in block <VGA>.
-WARNING:Xst:2404 -  FFs/Latches <vgaRed<2:0>> (without init value) have a constant value of 0 in block <VGA>.
-WARNING:Xst:524 - All outputs of the instance <generateClk25Mhz> of the block <Frequency_Divider> are unconnected in block <VGA>.
-   This instance will be removed from the design along with all underlying logic
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 4
-# ROMs                                                 : 1
+# ROMs                                                 : 2
  16x7-bit ROM                                          : 1
+ 256x8-bit ROM                                         : 1
 # Multipliers                                          : 1
  10x10-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 4
  16-bit adder                                          : 1
  20-bit adder carry out                                : 1
  24-bit adder                                          : 2
-# Counters                                             : 9
- 10-bit up counter                                     : 3
+# Counters                                             : 10
+ 10-bit up counter                                     : 4
  20-bit up counter                                     : 1
  4-bit up counter                                      : 4
  9-bit up counter                                      : 1
-# Registers                                            : 240
- Flip-Flops                                            : 240
+# Registers                                            : 10481
+ Flip-Flops                                            : 10481
 # Latches                                              : 5
  1-bit latch                                           : 2
  16-bit latch                                          : 2
  8-bit latch                                           : 1
-# Comparators                                          : 9
- 10-bit comparator greater                             : 3
+# Comparators                                          : 13
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 2
  10-bit comparator lessequal                           : 4
  20-bit comparator greater                             : 1
  24-bit comparator less                                : 1
+# Multiplexers                                         : 1
+ 8-bit 640-to-1 multiplexer                            : 1
 # Xors                                                 : 2
  1-bit xor8                                            : 1
  1-bit xor9                                            : 1
@@ -807,29 +804,18 @@ Optimizing unit <SevenSegment> ...
 Optimizing unit <sync_generater> ...
 
 Optimizing unit <VGA> ...
-WARNING:Xst:2677 - Node <vga_ReceivedData_0> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_1> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_2> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_3> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_4> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_5> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_6> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_7> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_8> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_9> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_10> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_11> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_12> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_13> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_14> of sequential type is unconnected in block <vga_test>.
-WARNING:Xst:2677 - Node <vga_ReceivedData_15> of sequential type is unconnected in block <vga_test>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block vga_test, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block vga_test, actual ratio is 87.
 FlipFlop Uart_Data_Save/Transaction_1 has been replicated 1 time(s)
 FlipFlop Uart_Data_Save/Transaction_2 has been replicated 1 time(s)
 FlipFlop Uart_Data_Save/Transaction_3 has been replicated 1 time(s)
+FlipFlop VGA/rd_ptr_0 has been replicated 69 time(s)
+FlipFlop VGA/rd_ptr_1 has been replicated 10 time(s)
+FlipFlop VGA/rd_ptr_2 has been replicated 3 time(s)
+FlipFlop VGA/rd_ptr_7 has been replicated 142 time(s)
+FlipFlop VGA/rd_ptr_8 has been replicated 41 time(s)
 
 Final Macro Processing ...
 
@@ -837,8 +823,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 320
- Flip-Flops                                            : 320
+# Registers                                            : 10836
+ Flip-Flops                                            : 10836
 
 =========================================================================
 
@@ -867,40 +853,44 @@ Design Statistics
 # IOs                              : 93
 
 Cell Usage :
-# BELS                             : 795
+# BELS                             : 11708
 #      GND                         : 1
-#      INV                         : 20
-#      LUT1                        : 110
-#      LUT2                        : 59
-#      LUT2_D                      : 4
-#      LUT3                        : 94
-#      LUT3_D                      : 5
+#      INV                         : 21
+#      LUT1                        : 119
+#      LUT2                        : 87
+#      LUT2_D                      : 13
+#      LUT2_L                      : 6
+#      LUT3                        : 3277
+#      LUT3_D                      : 14
 #      LUT3_L                      : 1
-#      LUT4                        : 200
-#      LUT4_D                      : 4
-#      LUT4_L                      : 25
-#      MUXCY                       : 130
-#      MUXF5                       : 15
+#      LUT4                        : 5282
+#      LUT4_D                      : 62
+#      LUT4_L                      : 29
+#      MUXCY                       : 139
+#      MUXF5                       : 1367
+#      MUXF6                       : 663
+#      MUXF7                       : 330
+#      MUXF8                       : 160
 #      VCC                         : 1
-#      XORCY                       : 126
-# FlipFlops/Latches                : 346
+#      XORCY                       : 136
+# FlipFlops/Latches                : 10878
 #      FD                          : 11
 #      FD_1                        : 55
 #      FDC                         : 13
 #      FDCE                        : 14
-#      FDE                         : 71
+#      FDE                         : 10303
 #      FDE_1                       : 16
 #      FDP                         : 2
-#      FDR                         : 60
+#      FDR                         : 344
 #      FDRE                        : 20
 #      FDRS                        : 1
 #      FDS                         : 9
 #      FDS_1                       : 46
 #      FDSE                        : 2
 #      LD                          : 25
-#      LD_1                        : 1
-# Clock Buffers                    : 3
-#      BUFG                        : 2
+#      LD_1                        : 17
+# Clock Buffers                    : 5
+#      BUFG                        : 4
 #      BUFGP                       : 1
 # IO Buffers                       : 91
 #      IBUF                        : 13
@@ -915,13 +905,13 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                      286  out of   8672     3%  
- Number of Slice Flip Flops:            346  out of  17344     1%  
- Number of 4 input LUTs:                522  out of  17344     3%  
+ Number of Slices:                     7773  out of   8672    89%  
+ Number of Slice Flip Flops:          10878  out of  17344    62%  
+ Number of 4 input LUTs:               8911  out of  17344    51%  
  Number of IOs:                          93
  Number of bonded IOBs:                  92  out of    250    36%  
  Number of MULT18X18SIOs:                 1  out of     28     3%  
- Number of GCLKs:                         3  out of     24    12%  
+ Number of GCLKs:                         5  out of     24    20%  
 
 ---------------------------
 Partition Resource Summary:
@@ -944,8 +934,8 @@ Clock Information:
 ---------------------------------------------+-----------------------------------+-------+
 Clock Signal                                 | Clock buffer(FF name)             | Load  |
 ---------------------------------------------+-----------------------------------+-------+
-clk                                          | BUFGP                             | 233   |
-PsdramState                                  | NONE(Mtrien_psdram_MemDataIn)     | 17    |
+clk                                          | BUFGP                             | 10458 |
+PsdramState1                                 | BUFG                              | 33    |
 uart0/UART/rClk1                             | BUFG                              | 36    |
 uart0/UART/rClkDiv_3                         | NONE(uart0/UART/tfSReg_0)         | 16    |
 uart0/UART/stbeCur_FSM_FFd1                  | NONE(uart0/UART/TBE)              | 1     |
@@ -953,6 +943,7 @@ uart0/UART/RDA                               | NONE(uart0/dbInSig_7)            
 uart0/wrSig                                  | NONE(uart0/send_rdy)              | 1     |
 SevenSegment/divide_Clk_50Mhz_To_240hz/OutClk| NONE(SevenSegment/TmpCnt_FSM_FFd1)| 12    |
 VGA/sync_generater/generateClk25Mhz/Outclk1  | BUFG                              | 22    |
+VGA/generateClk25Mhz/Outclk1                 | BUFG                              | 291   |
 ---------------------------------------------+-----------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -970,9 +961,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 12.608ns (Maximum Frequency: 79.315MHz)
+   Minimum period: 13.333ns (Maximum Frequency: 75.002MHz)
    Minimum input arrival time before clock: 4.981ns
-   Maximum output required time after clock: 7.069ns
+   Maximum output required time after clock: 7.065ns
    Maximum combinational path delay: 6.180ns
 
 Timing Detail:
@@ -982,22 +973,22 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.608ns (frequency: 79.315MHz)
-  Total number of paths / destination ports: 3181 / 378
+  Total number of paths / destination ports: 68750 / 15707
 -------------------------------------------------------------------------
 Delay:               6.304ns (Levels of Logic = 3)
-  Source:            Uart_Data_Save/Transaction_2_1 (FF)
+  Source:            Uart_Data_Save/Transaction_1_1 (FF)
   Destination:       Uart_Data_Save/nRamUB (FF)
   Source Clock:      clk rising
   Destination Clock: clk falling
 
-  Data Path: Uart_Data_Save/Transaction_2_1 to Uart_Data_Save/nRamUB
+  Data Path: Uart_Data_Save/Transaction_1_1 to Uart_Data_Save/nRamUB
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.591   0.595  Uart_Data_Save/Transaction_2_1 (Uart_Data_Save/Transaction_2_1)
+     FDRE:C->Q             1   0.591   0.595  Uart_Data_Save/Transaction_1_1 (Uart_Data_Save/Transaction_1_1)
      LUT2_D:I0->O          5   0.704   0.637  Uart_Data_Save/nRamLB_mux000021 (Uart_Data_Save/N7)
      LUT4_D:I3->O         16   0.704   1.038  Uart_Data_Save/nRamLB_mux000011_1 (Uart_Data_Save/nRamLB_mux000011)
-     LUT4:I3->O            1   0.704   0.420  Uart_Data_Save/nRamLB_mux0000_SW0 (N61)
+     LUT4:I3->O            1   0.704   0.420  Uart_Data_Save/nRamLB_mux0000_SW0 (N69)
      FDS_1:S                   0.911          Uart_Data_Save/nRamLB
     ----------------------------------------
     Total                      6.304ns (3.614ns logic, 2.690ns route)
@@ -1051,33 +1042,33 @@ Delay:               3.811ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SevenSegment/divide_Clk_50Mhz_To_240hz/OutClk'
-  Clock period: 3.518ns (frequency: 284.252MHz)
+  Clock period: 3.689ns (frequency: 271.076MHz)
   Total number of paths / destination ports: 24 / 16
 -------------------------------------------------------------------------
-Delay:               3.518ns (Levels of Logic = 2)
-  Source:            SevenSegment/TmpCnt_FSM_FFd4 (FF)
-  Destination:       SevenSegment/Value_3 (FF)
+Delay:               3.689ns (Levels of Logic = 2)
+  Source:            SevenSegment/TmpCnt_FSM_FFd1 (FF)
+  Destination:       SevenSegment/Value_1 (FF)
   Source Clock:      SevenSegment/divide_Clk_50Mhz_To_240hz/OutClk rising
   Destination Clock: SevenSegment/divide_Clk_50Mhz_To_240hz/OutClk rising
 
-  Data Path: SevenSegment/TmpCnt_FSM_FFd4 to SevenSegment/Value_3
+  Data Path: SevenSegment/TmpCnt_FSM_FFd1 to SevenSegment/Value_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               7   0.591   0.787  SevenSegment/TmpCnt_FSM_FFd4 (SevenSegment/TmpCnt_FSM_FFd4)
-     LUT4:I1->O            1   0.704   0.424  SevenSegment/Value_mux0000<3>241_SW0 (N158)
-     LUT4:I3->O            1   0.704   0.000  SevenSegment/Value_mux0000<3>241 (SevenSegment/Value_mux0000<3>24)
-     FDS:D                     0.308          SevenSegment/Value_3
+     FD:C->Q               7   0.591   0.883  SevenSegment/TmpCnt_FSM_FFd1 (SevenSegment/TmpCnt_FSM_FFd1)
+     LUT4:I0->O            1   0.704   0.499  SevenSegment/Value_mux0000<1>501_SW0 (N204)
+     LUT3:I1->O            1   0.704   0.000  SevenSegment/Value_mux0000<1>501 (SevenSegment/Value_mux0000<1>50)
+     FDS:D                     0.308          SevenSegment/Value_1
     ----------------------------------------
-    Total                      3.518ns (2.307ns logic, 1.211ns route)
-                                       (65.6% logic, 34.4% route)
+    Total                      3.689ns (2.307ns logic, 1.382ns route)
+                                       (62.5% logic, 37.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'VGA/sync_generater/generateClk25Mhz/Outclk1'
-  Clock period: 5.928ns (frequency: 168.691MHz)
+  Clock period: 5.967ns (frequency: 167.588MHz)
   Total number of paths / destination ports: 435 / 32
 -------------------------------------------------------------------------
-Delay:               5.928ns (Levels of Logic = 3)
+Delay:               5.967ns (Levels of Logic = 3)
   Source:            VGA/sync_generater/hcount_3 (FF)
   Destination:       VGA/sync_generater/hsync (FF)
   Source Clock:      VGA/sync_generater/generateClk25Mhz/Outclk1 rising
@@ -1087,14 +1078,50 @@ Delay:               5.928ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              6   0.591   0.844  VGA/sync_generater/hcount_3 (VGA/sync_generater/hcount_3)
+     FDC:C->Q              7   0.591   0.883  VGA/sync_generater/hcount_3 (VGA/sync_generater/hcount_3)
      LUT4:I0->O            1   0.704   0.420  VGA/sync_generater/hsync_and000024 (VGA/sync_generater/hsync_and000024)
      MUXF5:S->O            1   0.739   0.595  VGA/sync_generater/hsync_and000041 (VGA/sync_generater/hsync_and000041)
      LUT4:I0->O            1   0.704   0.420  VGA/sync_generater/hsync_and000058 (VGA/sync_generater/hsync_and0000)
      FDR:R                     0.911          VGA/sync_generater/hsync
     ----------------------------------------
-    Total                      5.928ns (3.649ns logic, 2.279ns route)
-                                       (61.6% logic, 38.4% route)
+    Total                      5.967ns (3.649ns logic, 2.318ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA/generateClk25Mhz/Outclk1'
+  Clock period: 13.333ns (frequency: 75.002MHz)
+  Total number of paths / destination ports: 404144 / 291
+-------------------------------------------------------------------------
+Delay:               13.333ns (Levels of Logic = 15)
+  Source:            VGA/rd_ptr_7_71 (FF)
+  Destination:       VGA/Digit_1 (FF)
+  Source Clock:      VGA/generateClk25Mhz/Outclk1 rising
+  Destination Clock: VGA/generateClk25Mhz/Outclk1 rising
+
+  Data Path: VGA/rd_ptr_7_71 to VGA/Digit_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.591   0.917  VGA/rd_ptr_7_71 (VGA/rd_ptr_7_71)
+     LUT3:I2->O            1   0.704   0.000  VGA/Mmux__varindex0000_20105 (VGA/Mmux__varindex0000_20105)
+     MUXF5:I1->O           1   0.321   0.000  VGA/Mmux__varindex0000_19_f5_35 (VGA/Mmux__varindex0000_19_f536)
+     MUXF6:I0->O           1   0.521   0.000  VGA/Mmux__varindex0000_17_f6_26 (VGA/Mmux__varindex0000_17_f627)
+     MUXF7:I0->O           1   0.521   0.000  VGA/Mmux__varindex0000_15_f7_18 (VGA/Mmux__varindex0000_15_f719)
+     MUXF8:I1->O           1   0.521   0.499  VGA/Mmux__varindex0000_14_f8_6 (VGA/Mmux__varindex0000_14_f87)
+     LUT3:I1->O            1   0.704   0.000  VGA/Mmux__varindex0000_111 (VGA/Mmux__varindex0000_111)
+     MUXF5:I0->O           1   0.321   0.000  VGA/Mmux__varindex0000_9_f5_0 (VGA/Mmux__varindex0000_9_f51)
+     MUXF6:I0->O           1   0.521   0.000  VGA/Mmux__varindex0000_7_f6_0 (VGA/Mmux__varindex0000_7_f61)
+     MUXF7:I0->O          16   0.521   1.069  VGA/Mmux__varindex0000_5_f7_0 (VGA/Mmux__varindex0000_5_f71)
+     LUT3_D:I2->O         10   0.704   0.886  VGA/rd_ptr<9>11_1 (VGA/rd_ptr<9>11)
+     LUT4:I3->O            2   0.704   0.451  VGA/Palette_256color/Mrom_rgb101 (VGA/Palette_256color/Mrom_rgb10)
+     LUT4:I3->O            1   0.704   0.000  VGA/Palette_256color/Mrom_rgb121_7_f5_0_SW0_G (N183)
+     MUXF5:I1->O           1   0.321   0.499  VGA/Palette_256color/Mrom_rgb121_7_f5_0_SW0 (N157)
+     LUT3:I1->O            1   0.704   0.000  VGA/Palette_256color/Mrom_rgb121_31 (VGA/Palette_256color/Mrom_rgb121_31)
+     MUXF5:I1->O           2   0.321   0.000  VGA/Palette_256color/Mrom_rgb121_2_f5_0 (VGA/rgb_pallete<1>)
+     FDR:D                     0.308          VGA/vgaBlue_1
+    ----------------------------------------
+    Total                     13.333ns (9.012ns logic, 4.321ns route)
+                                       (67.6% logic, 32.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -1117,30 +1144,30 @@ Offset:              4.981ns (Levels of Logic = 2)
                                        (56.9% logic, 43.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'PsdramState'
-  Total number of paths / destination ports: 16 / 16
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PsdramState1'
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              2.825ns (Levels of Logic = 2)
+Offset:              2.852ns (Levels of Logic = 2)
   Source:            MemDB<0> (PAD)
   Destination:       Mtridata_psdram_MemDataIn_0 (LATCH)
-  Destination Clock: PsdramState falling
+  Destination Clock: PsdramState1 falling
 
   Data Path: MemDB<0> to Mtridata_psdram_MemDataIn_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.218   0.595  MemDB_0_IOBUF (N103)
+     IOBUF:IO->O           2   1.218   0.622  MemDB_0_IOBUF (N118)
      LUT3:I0->O            1   0.704   0.000  Mtridata_psdram_MemDataIn_mux0000<0>1 (Mtridata_psdram_MemDataIn_mux0000<0>)
      LD:D                      0.308          Mtridata_psdram_MemDataIn_0
     ----------------------------------------
-    Total                      2.825ns (2.230ns logic, 0.595ns route)
-                                       (78.9% logic, 21.1% route)
+    Total                      2.852ns (2.230ns logic, 0.622ns route)
+                                       (78.2% logic, 21.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'uart0/UART/rClk1'
   Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              4.674ns (Levels of Logic = 2)
+Offset:              4.578ns (Levels of Logic = 2)
   Source:            BtnSwitch<0> (PAD)
   Destination:       uart0/UART/rdReg_0 (FF)
   Destination Clock: uart0/UART/rClk1 rising
@@ -1149,12 +1176,12 @@ Offset:              4.674ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            41   1.218   1.440  BtnSwitch_0_IBUF (BtnSwitch_0_IBUF)
-     LUT4:I0->O            8   0.704   0.757  uart0/UART/rdReg_and00001 (uart0/UART/rdReg_and0000)
+     IBUF:I->O            41   1.218   1.344  BtnSwitch_0_IBUF (BtnSwitch_0_IBUF)
+     LUT4:I1->O            8   0.704   0.757  uart0/UART/rdReg_and00001 (uart0/UART/rdReg_and0000)
      FDE:CE                    0.555          uart0/UART/rdReg_0
     ----------------------------------------
-    Total                      4.674ns (2.477ns logic, 2.197ns route)
-                                       (53.0% logic, 47.0% route)
+    Total                      4.578ns (2.477ns logic, 2.101ns route)
+                                       (54.1% logic, 45.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'uart0/UART/rClkDiv_3'
@@ -1198,7 +1225,7 @@ Offset:              4.283ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 135 / 52
 -------------------------------------------------------------------------
-Offset:              7.069ns (Levels of Logic = 2)
+Offset:              7.065ns (Levels of Logic = 2)
   Source:            PsdramState (FF)
   Destination:       MemWR (PAD)
   Source Clock:      clk rising
@@ -1207,11 +1234,11 @@ Offset:              7.069ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             75   0.591   1.451  PsdramState (PsdramState)
+     FDE:C->Q             63   0.591   1.447  PsdramState (PsdramState1)
      LUT2:I0->O           17   0.704   1.051  MemDB_or00001 (MemDB_psdram_MemDataOut_not0000_inv)
      OBUF:I->O                 3.272          MemWR_OBUF (MemWR)
     ----------------------------------------
-    Total                      7.069ns (4.567ns logic, 2.502ns route)
+    Total                      7.065ns (4.567ns logic, 2.498ns route)
                                        (64.6% logic, 35.4% route)
 
 =========================================================================
@@ -1255,6 +1282,25 @@ Offset:              6.191ns (Levels of Logic = 3)
                                        (79.0% logic, 21.0% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA/generateClk25Mhz/Outclk1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            VGA/vgaRed_2 (FF)
+  Destination:       vgaRed<3> (PAD)
+  Source Clock:      VGA/generateClk25Mhz/Outclk1 rising
+
+  Data Path: VGA/vgaRed_2 to vgaRed<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.420  VGA/vgaRed_2 (VGA/vgaRed_2)
+     OBUF:I->O                 3.272          vgaRed_3_OBUF (vgaRed<3>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
@@ -1276,14 +1322,14 @@ Delay:               6.180ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.21 secs
+Total REAL time to Xst completion: 99.00 secs
+Total CPU time to Xst completion: 98.30 secs
  
 --> 
 
-Total memory usage is 332892 kilobytes
+Total memory usage is 496924 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   56 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
 Number of infos    :   19 (   0 filtered)
 

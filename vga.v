@@ -50,7 +50,7 @@ module VGA
 	output reg [22:0] MemAdr,
 	input  [15:0] MemDataIn,
 	
-	output [15:0] Digit	
+	output reg [15:0] Digit	
 	);
 	
 	reg [3:0] state_reg  = STATE0;
@@ -87,8 +87,13 @@ module VGA
 	
 	always @(posedge clk_25Mhz) begin
 		if(videoon == 1) begin
-			{vgaRed, vgaGreen, vgaBlue} <= rgb_pallete;
+			vgaRed   <= rgb_pallete[7:5];
+			vgaGreen <= rgb_pallete[4:2];
+			vgaBlue  <= rgb_pallete[1:0];
+			//{vgaRed, vgaGreen, vgaBlue} <= rgb_pallete[7:0];
 			//{vgaRed, vgaGreen, vgaBlue} <= rgb_cur[rd_ptr];
+			Digit <= rgb_pallete[7:0];
+			
 			rd_ptr <= rd_ptr + 1;
 		end
 		else begin
@@ -134,7 +139,7 @@ module VGA
 			STATE1 : begin state_next <= STATE2; end	
 			STATE2 : begin	state_next <= STATE3; end
 			STATE3 : begin 
-								rgb_next[wr_ptr*2]     <= MemDataIn[7:0];
+								rgb_next[wr_ptr*2]     <= MemDataIn[7:0];   
 								rgb_next[(wr_ptr*2)+1] <= MemDataIn[15:8];
 								
 								if(wr_ptr == 319) begin
