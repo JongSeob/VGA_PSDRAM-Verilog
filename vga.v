@@ -60,11 +60,13 @@ module VGA
 	
 	// ****************** Register Array **********************//
 	
-	reg [7:0] rgb_cur[639:0];
+	reg [7:0] rgb_cur[639:0];  // Pallete의 index로 이용된다.
 	reg [7:0] rgb_next[639:0];
 	
 	reg [9:0] rd_ptr = 0;
 	reg [9:0] wr_ptr = 0;
+	
+	wire [7:0] rgb_pallete;
 	
 	reg write_complete = 0;
 	
@@ -85,7 +87,8 @@ module VGA
 	
 	always @(posedge clk_25Mhz) begin
 		if(videoon == 1) begin
-			{vgaRed, vgaGreen, vgaBlue} <= rgb_cur[rd_ptr];
+			{vgaRed, vgaGreen, vgaBlue} <= rgb_pallete;
+			//{vgaRed, vgaGreen, vgaBlue} <= rgb_cur[rd_ptr];
 			rd_ptr <= rd_ptr + 1;
 		end
 		else begin
@@ -159,18 +162,22 @@ module VGA
 	end
 	
 	 Frequency_Divider #(.TARGET_FREQUENCY(25000000)) generateClk25Mhz (
-    .Inclk			(clk), 
-    .Outclk			(clk_25Mhz)	 	 
+		 .Inclk			(clk), 
+		 .Outclk			(clk_25Mhz)	 	 
     );
 		
 	sync_generater sync_generater (
-    .clk(clk), 
-    .reset(reset), 
-    .hsync(hsync), 
-    .vsync(vsync), 
-    .hcount(hcount), 
-    .vcount(vcount)
+		 .clk			(clk), 
+		 .reset		(reset), 
+		 .hsync		(hsync), 
+		 .vsync		(vsync), 
+		 .hcount		(hcount), 
+		 .vcount		(vcount)
     );	
-	 
+	
+	Palette Palette_256color (
+		 .index		(rgb_cur[rd_ptr]), 
+		 .rgb			(rgb)
+    );
 
 endmodule 

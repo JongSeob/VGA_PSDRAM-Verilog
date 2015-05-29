@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+Palette instance_name (
+    .index(index), 
+    .rgb(rgb)
+    );
+
+

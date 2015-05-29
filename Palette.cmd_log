@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj VGA_BreakDown -o E:/VGA_PSDRAM_Project/Palette.tfi -lib work E:/VGA_PSDRAM_Project//Palette.v -module Palette -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

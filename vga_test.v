@@ -201,11 +201,11 @@ module vga_test
 	);
 	
 	uart uart0(
-     .CLK					(clk), // The master clock for this module
+     .clk					(clk), // The master clock for this module
      .RST					(BtnSwitch[0]), // Synchronous reset.
-//	  .LEDS					(Led),
-     .RXD					(RXD), // Incoming serial line
-     .TXD					(TXD), // Outgoing serial line
+//	  .oLed					(Led),
+     .RxD					(RXD), // Incoming serial line
+     .TxD					(TXD), // Outgoing serial line
      .ValidData			(ValidData), // Indicated that a byte has been received.
      .ReceivedData		(ReceivedData)// Byte received
     );
