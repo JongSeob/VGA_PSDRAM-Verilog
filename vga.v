@@ -29,7 +29,9 @@ module VGA
 	parameter HMAX   = 786,
 	parameter VMAX   = 521,
 	parameter HLINES = 640,
-	parameter VLINES = 480
+	parameter VLINES = 480,
+	
+	parameter P_Image1 = 1078 // 11'h436
  )
 (
 	input clk, 
@@ -124,7 +126,7 @@ module VGA
 								write_complete <= 0;
 			
 							if( (vcount >= 0) && (vcount <= 479) && (write_complete == 0)) begin
-								MemAdr <= (vcount * 640) + wr_ptr;
+								MemAdr <= P_Image1 + (vcount * 640) + wr_ptr;
 								RamCE <= 0;
 								MemOE <= 0;
 								state_next <= STATE1;
@@ -160,7 +162,7 @@ module VGA
 	
 	always @(posedge clk) begin
 		if(hcount == HMAX-1) begin
-			for(i=0; i < 639; i = i+1) begin
+			for(i=0; i < 640; i = i+1) begin
 				rgb_cur[i] = rgb_next[i];		
 			end
 		end			

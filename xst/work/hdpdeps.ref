@@ -1,7 +1,7 @@
 V3 3
 FL E:/VGA_PSDRAM_Project/Rs232RefComp.vhd 2015/01/12.10:51:40 P.20131013
-EN work/Rs232RefComp 1432877480 FL E:/VGA_PSDRAM_Project/Rs232RefComp.vhd \
+EN work/Rs232RefComp 1432883347 FL E:/VGA_PSDRAM_Project/Rs232RefComp.vhd \
       PB ieee/std_logic_1164 1354696159 PB ieee/std_logic_arith 1354696160 \
       PB ieee/STD_LOGIC_UNSIGNED 1354696162
-AR work/Rs232RefComp/Behavioral 1432877481 \
-      FL E:/VGA_PSDRAM_Project/Rs232RefComp.vhd EN work/Rs232RefComp 1432877480
+AR work/Rs232RefComp/Behavioral 1432883348 \
+      FL E:/VGA_PSDRAM_Project/Rs232RefComp.vhd EN work/Rs232RefComp 1432883347

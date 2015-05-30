@@ -45,18 +45,18 @@ Setup/Hold to clock clk
              |Max Setup to|Max Hold to |                  | Clock  |
 Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 -------------+------------+------------+------------------+--------+
-BtnSwitch<0> |    8.758(R)|   -0.278(R)|clk_BUFGP         |   0.000|
-BtnSwitch<1> |    5.614(R)|   -2.186(R)|clk_BUFGP         |   0.000|
-BtnSwitch<2> |    6.727(R)|   -1.770(R)|clk_BUFGP         |   0.000|
-BtnSwitch<3> |    3.247(R)|    0.331(R)|clk_BUFGP         |   0.000|
-SideSwitch<0>|    4.668(F)|   -2.274(F)|clk_BUFGP         |   0.000|
-SideSwitch<1>|    6.059(F)|   -2.190(F)|clk_BUFGP         |   0.000|
-SideSwitch<2>|    6.865(F)|   -2.629(F)|clk_BUFGP         |   0.000|
-SideSwitch<3>|    5.547(F)|   -2.173(F)|clk_BUFGP         |   0.000|
-SideSwitch<4>|    5.669(F)|   -2.139(F)|clk_BUFGP         |   0.000|
-SideSwitch<5>|    6.221(F)|   -2.345(F)|clk_BUFGP         |   0.000|
-SideSwitch<6>|    6.938(F)|   -2.794(F)|clk_BUFGP         |   0.000|
-SideSwitch<7>|    7.290(F)|   -4.338(F)|clk_BUFGP         |   0.000|
+BtnSwitch<0> |    5.544(R)|   -0.080(R)|clk_BUFGP         |   0.000|
+BtnSwitch<1> |    4.845(R)|   -1.285(R)|clk_BUFGP         |   0.000|
+BtnSwitch<2> |    5.417(R)|   -0.971(R)|clk_BUFGP         |   0.000|
+BtnSwitch<3> |    4.538(R)|   -0.108(R)|clk_BUFGP         |   0.000|
+SideSwitch<0>|    6.237(F)|   -2.483(F)|clk_BUFGP         |   0.000|
+SideSwitch<1>|    6.580(F)|   -2.882(F)|clk_BUFGP         |   0.000|
+SideSwitch<2>|    7.562(F)|   -4.025(F)|clk_BUFGP         |   0.000|
+SideSwitch<3>|    5.877(F)|   -2.965(F)|clk_BUFGP         |   0.000|
+SideSwitch<4>|    8.424(F)|   -3.906(F)|clk_BUFGP         |   0.000|
+SideSwitch<5>|    7.178(F)|   -2.722(F)|clk_BUFGP         |   0.000|
+SideSwitch<6>|    8.579(F)|   -4.614(F)|clk_BUFGP         |   0.000|
+SideSwitch<7>|    7.449(F)|   -4.571(F)|clk_BUFGP         |   0.000|
 -------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -64,102 +64,102 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-Led<0>      |   10.571(R)|clk_BUFGP         |   0.000|
-Led<1>      |   10.571(R)|clk_BUFGP         |   0.000|
-Led<2>      |   10.817(R)|clk_BUFGP         |   0.000|
-Led<3>      |   11.063(R)|clk_BUFGP         |   0.000|
-Led<4>      |   12.835(R)|clk_BUFGP         |   0.000|
-Led<5>      |   13.343(R)|clk_BUFGP         |   0.000|
-Led<6>      |   10.492(R)|clk_BUFGP         |   0.000|
-Led<7>      |   10.836(R)|clk_BUFGP         |   0.000|
-MemAdr<1>   |   11.699(R)|clk_BUFGP         |   0.000|
-            |    9.911(F)|clk_BUFGP         |   0.000|
-MemAdr<2>   |   12.315(R)|clk_BUFGP         |   0.000|
-            |    9.380(F)|clk_BUFGP         |   0.000|
-MemAdr<3>   |   12.094(R)|clk_BUFGP         |   0.000|
-            |    9.108(F)|clk_BUFGP         |   0.000|
-MemAdr<4>   |   12.291(R)|clk_BUFGP         |   0.000|
-            |    9.092(F)|clk_BUFGP         |   0.000|
-MemAdr<5>   |   13.037(R)|clk_BUFGP         |   0.000|
-            |    9.376(F)|clk_BUFGP         |   0.000|
-MemAdr<6>   |   11.891(R)|clk_BUFGP         |   0.000|
-            |    8.643(F)|clk_BUFGP         |   0.000|
-MemAdr<7>   |   12.390(R)|clk_BUFGP         |   0.000|
-            |   10.313(F)|clk_BUFGP         |   0.000|
-MemAdr<8>   |   11.066(R)|clk_BUFGP         |   0.000|
-            |    9.999(F)|clk_BUFGP         |   0.000|
-MemAdr<9>   |   11.134(R)|clk_BUFGP         |   0.000|
-            |   10.455(F)|clk_BUFGP         |   0.000|
-MemAdr<10>  |   10.688(R)|clk_BUFGP         |   0.000|
-            |   10.326(F)|clk_BUFGP         |   0.000|
-MemAdr<11>  |   12.741(R)|clk_BUFGP         |   0.000|
-            |    9.971(F)|clk_BUFGP         |   0.000|
-MemAdr<12>  |   11.391(R)|clk_BUFGP         |   0.000|
-            |   10.019(F)|clk_BUFGP         |   0.000|
-MemAdr<13>  |   11.728(R)|clk_BUFGP         |   0.000|
-            |   10.522(F)|clk_BUFGP         |   0.000|
-MemAdr<14>  |   11.655(R)|clk_BUFGP         |   0.000|
-            |   10.186(F)|clk_BUFGP         |   0.000|
-MemAdr<15>  |   12.227(R)|clk_BUFGP         |   0.000|
-            |   10.709(F)|clk_BUFGP         |   0.000|
-MemAdr<16>  |   12.388(R)|clk_BUFGP         |   0.000|
-            |   11.326(F)|clk_BUFGP         |   0.000|
-MemAdr<17>  |   11.206(R)|clk_BUFGP         |   0.000|
-            |   10.511(F)|clk_BUFGP         |   0.000|
-MemAdr<18>  |   11.765(R)|clk_BUFGP         |   0.000|
-            |   11.284(F)|clk_BUFGP         |   0.000|
-MemAdr<19>  |   12.451(R)|clk_BUFGP         |   0.000|
-            |   11.334(F)|clk_BUFGP         |   0.000|
-MemAdr<20>  |   12.411(R)|clk_BUFGP         |   0.000|
-            |   11.105(F)|clk_BUFGP         |   0.000|
-MemAdr<21>  |   11.220(R)|clk_BUFGP         |   0.000|
-            |    9.959(F)|clk_BUFGP         |   0.000|
-MemAdr<22>  |   11.043(R)|clk_BUFGP         |   0.000|
-            |   10.544(F)|clk_BUFGP         |   0.000|
-MemAdr<23>  |   12.205(R)|clk_BUFGP         |   0.000|
-            |    9.524(F)|clk_BUFGP         |   0.000|
-MemDB<0>    |   12.006(R)|clk_BUFGP         |   0.000|
-            |   10.705(F)|clk_BUFGP         |   0.000|
-MemDB<1>    |   12.506(R)|clk_BUFGP         |   0.000|
-            |   11.205(F)|clk_BUFGP         |   0.000|
-MemDB<2>    |   12.514(R)|clk_BUFGP         |   0.000|
-            |   11.213(F)|clk_BUFGP         |   0.000|
-MemDB<3>    |   12.762(R)|clk_BUFGP         |   0.000|
-            |   11.461(F)|clk_BUFGP         |   0.000|
-MemDB<4>    |   13.534(R)|clk_BUFGP         |   0.000|
-            |   12.233(F)|clk_BUFGP         |   0.000|
-MemDB<5>    |   14.049(R)|clk_BUFGP         |   0.000|
-            |   12.748(F)|clk_BUFGP         |   0.000|
-MemDB<6>    |   13.796(R)|clk_BUFGP         |   0.000|
-            |   12.495(F)|clk_BUFGP         |   0.000|
-MemDB<7>    |   15.077(R)|clk_BUFGP         |   0.000|
-            |   13.776(F)|clk_BUFGP         |   0.000|
-MemDB<8>    |   12.255(R)|clk_BUFGP         |   0.000|
-            |   10.954(F)|clk_BUFGP         |   0.000|
-MemDB<9>    |   12.762(R)|clk_BUFGP         |   0.000|
-            |   11.461(F)|clk_BUFGP         |   0.000|
-MemDB<10>   |   13.017(R)|clk_BUFGP         |   0.000|
-            |   11.716(F)|clk_BUFGP         |   0.000|
-MemDB<11>   |   13.274(R)|clk_BUFGP         |   0.000|
+Led<0>      |   11.207(R)|clk_BUFGP         |   0.000|
+Led<1>      |   11.691(R)|clk_BUFGP         |   0.000|
+Led<2>      |   12.214(R)|clk_BUFGP         |   0.000|
+Led<3>      |   12.204(R)|clk_BUFGP         |   0.000|
+Led<4>      |   10.333(R)|clk_BUFGP         |   0.000|
+Led<5>      |   14.483(R)|clk_BUFGP         |   0.000|
+Led<6>      |    9.883(R)|clk_BUFGP         |   0.000|
+Led<7>      |   14.581(R)|clk_BUFGP         |   0.000|
+MemAdr<1>   |   13.093(R)|clk_BUFGP         |   0.000|
+            |   11.599(F)|clk_BUFGP         |   0.000|
+MemAdr<2>   |   13.258(R)|clk_BUFGP         |   0.000|
+            |   11.016(F)|clk_BUFGP         |   0.000|
+MemAdr<3>   |   12.614(R)|clk_BUFGP         |   0.000|
+            |   10.785(F)|clk_BUFGP         |   0.000|
+MemAdr<4>   |   12.537(R)|clk_BUFGP         |   0.000|
+            |   10.780(F)|clk_BUFGP         |   0.000|
+MemAdr<5>   |   12.523(R)|clk_BUFGP         |   0.000|
+            |   11.002(F)|clk_BUFGP         |   0.000|
+MemAdr<6>   |   12.870(R)|clk_BUFGP         |   0.000|
+            |   11.807(F)|clk_BUFGP         |   0.000|
+MemAdr<7>   |   12.246(R)|clk_BUFGP         |   0.000|
+            |   10.248(F)|clk_BUFGP         |   0.000|
+MemAdr<8>   |   11.901(R)|clk_BUFGP         |   0.000|
+            |   10.678(F)|clk_BUFGP         |   0.000|
+MemAdr<9>   |   11.828(R)|clk_BUFGP         |   0.000|
+            |   10.517(F)|clk_BUFGP         |   0.000|
+MemAdr<10>  |   11.753(R)|clk_BUFGP         |   0.000|
+            |   10.201(F)|clk_BUFGP         |   0.000|
+MemAdr<11>  |   12.492(R)|clk_BUFGP         |   0.000|
+            |   10.790(F)|clk_BUFGP         |   0.000|
+MemAdr<12>  |   11.863(R)|clk_BUFGP         |   0.000|
+            |   10.987(F)|clk_BUFGP         |   0.000|
+MemAdr<13>  |   12.472(R)|clk_BUFGP         |   0.000|
+            |   10.775(F)|clk_BUFGP         |   0.000|
+MemAdr<14>  |   11.863(R)|clk_BUFGP         |   0.000|
+            |   10.177(F)|clk_BUFGP         |   0.000|
+MemAdr<15>  |   11.959(R)|clk_BUFGP         |   0.000|
+            |   10.535(F)|clk_BUFGP         |   0.000|
+MemAdr<16>  |   13.712(R)|clk_BUFGP         |   0.000|
+            |   11.576(F)|clk_BUFGP         |   0.000|
+MemAdr<17>  |   11.290(R)|clk_BUFGP         |   0.000|
+            |    9.854(F)|clk_BUFGP         |   0.000|
+MemAdr<18>  |   11.507(R)|clk_BUFGP         |   0.000|
+            |   10.681(F)|clk_BUFGP         |   0.000|
+MemAdr<19>  |   11.810(R)|clk_BUFGP         |   0.000|
+            |   10.641(F)|clk_BUFGP         |   0.000|
+MemAdr<20>  |   11.322(R)|clk_BUFGP         |   0.000|
+            |    9.764(F)|clk_BUFGP         |   0.000|
+MemAdr<21>  |   12.991(R)|clk_BUFGP         |   0.000|
+            |   11.451(F)|clk_BUFGP         |   0.000|
+MemAdr<22>  |   11.074(R)|clk_BUFGP         |   0.000|
+            |   10.136(F)|clk_BUFGP         |   0.000|
+MemAdr<23>  |   13.338(R)|clk_BUFGP         |   0.000|
+            |   11.665(F)|clk_BUFGP         |   0.000|
+MemDB<0>    |   13.132(R)|clk_BUFGP         |   0.000|
+            |   11.682(F)|clk_BUFGP         |   0.000|
+MemDB<1>    |   13.167(R)|clk_BUFGP         |   0.000|
+            |   11.725(F)|clk_BUFGP         |   0.000|
+MemDB<2>    |   13.389(R)|clk_BUFGP         |   0.000|
+            |   11.939(F)|clk_BUFGP         |   0.000|
+MemDB<3>    |   13.638(R)|clk_BUFGP         |   0.000|
+            |   12.188(F)|clk_BUFGP         |   0.000|
+MemDB<4>    |   14.198(R)|clk_BUFGP         |   0.000|
+            |   12.756(F)|clk_BUFGP         |   0.000|
+MemDB<5>    |   14.708(R)|clk_BUFGP         |   0.000|
+            |   13.262(F)|clk_BUFGP         |   0.000|
+MemDB<6>    |   14.713(R)|clk_BUFGP         |   0.000|
+            |   13.263(F)|clk_BUFGP         |   0.000|
+MemDB<7>    |   15.738(R)|clk_BUFGP         |   0.000|
+            |   14.288(F)|clk_BUFGP         |   0.000|
+MemDB<8>    |   13.135(R)|clk_BUFGP         |   0.000|
+            |   11.685(F)|clk_BUFGP         |   0.000|
+MemDB<9>    |   13.423(R)|clk_BUFGP         |   0.000|
             |   11.973(F)|clk_BUFGP         |   0.000|
-MemDB<12>   |   12.246(R)|clk_BUFGP         |   0.000|
-            |   10.945(F)|clk_BUFGP         |   0.000|
-MemDB<13>   |   13.827(R)|clk_BUFGP         |   0.000|
-            |   12.526(F)|clk_BUFGP         |   0.000|
-MemDB<14>   |   14.823(R)|clk_BUFGP         |   0.000|
-            |   13.522(F)|clk_BUFGP         |   0.000|
-MemDB<15>   |   15.331(R)|clk_BUFGP         |   0.000|
-            |   14.030(F)|clk_BUFGP         |   0.000|
-MemOE       |   13.829(R)|clk_BUFGP         |   0.000|
-            |   10.631(F)|clk_BUFGP         |   0.000|
-MemWR       |   16.988(R)|clk_BUFGP         |   0.000|
-            |   15.687(F)|clk_BUFGP         |   0.000|
-RamCE       |   14.736(R)|clk_BUFGP         |   0.000|
-            |   11.103(F)|clk_BUFGP         |   0.000|
-RamLB       |   11.396(R)|clk_BUFGP         |   0.000|
-            |   10.946(F)|clk_BUFGP         |   0.000|
-RamUB       |   11.063(R)|clk_BUFGP         |   0.000|
-            |   11.036(F)|clk_BUFGP         |   0.000|
+MemDB<10>   |   13.679(R)|clk_BUFGP         |   0.000|
+            |   12.237(F)|clk_BUFGP         |   0.000|
+MemDB<11>   |   13.942(R)|clk_BUFGP         |   0.000|
+            |   12.492(F)|clk_BUFGP         |   0.000|
+MemDB<12>   |   13.413(R)|clk_BUFGP         |   0.000|
+            |   11.971(F)|clk_BUFGP         |   0.000|
+MemDB<13>   |   14.190(R)|clk_BUFGP         |   0.000|
+            |   12.740(F)|clk_BUFGP         |   0.000|
+MemDB<14>   |   15.727(R)|clk_BUFGP         |   0.000|
+            |   14.277(F)|clk_BUFGP         |   0.000|
+MemDB<15>   |   15.991(R)|clk_BUFGP         |   0.000|
+            |   14.541(F)|clk_BUFGP         |   0.000|
+MemOE       |   12.189(R)|clk_BUFGP         |   0.000|
+            |   11.996(F)|clk_BUFGP         |   0.000|
+MemWR       |   18.289(R)|clk_BUFGP         |   0.000|
+            |   16.839(F)|clk_BUFGP         |   0.000|
+RamCE       |   12.243(R)|clk_BUFGP         |   0.000|
+            |   11.091(F)|clk_BUFGP         |   0.000|
+RamLB       |   12.456(R)|clk_BUFGP         |   0.000|
+            |   11.327(F)|clk_BUFGP         |   0.000|
+RamUB       |   13.141(R)|clk_BUFGP         |   0.000|
+            |   11.695(F)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -167,25 +167,25 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   11.267|    4.298|    6.165|    6.368|
+clk            |   11.279|    4.181|    5.754|    6.373|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-SideSwitch<7>  |Seg_DP         |   11.335|
+SideSwitch<7>  |Seg_DP         |   10.468|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri May 29 14:35:50 2015 
+Analysis completed Fri May 29 16:16:29 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 375 MB
+Peak Memory Usage: 376 MB
 
 
 
